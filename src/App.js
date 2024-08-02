@@ -5,8 +5,8 @@ import Mainpage from './Mainpage';
 function App() {
   return (
     <div >
-      {/* <Mainpage/> */}
-      <Login/>
+      <Mainpage/>
+      {/* <Login/> */}
     </div>
   );
 }
