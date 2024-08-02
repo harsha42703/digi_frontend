@@ -1,10 +1,12 @@
 import React from 'react';
-import Sidebar from './Components/Sidebar';
+import Login from './Pages/Login';
+import Mainpage from './Mainpage';
 
 function App() {
   return (
-    <div className="App">
-      <Sidebar />
+    <div >
+      {/* <Mainpage/> */}
+      <Login/>
     </div>
   );
 }
