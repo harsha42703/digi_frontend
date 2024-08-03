@@ -28,7 +28,7 @@ const Login = () => {
       </div>
       <div class="flex items-center justify-center px-4 py-10 sm:px-6 sm:py-16 lg:px-8 lg:py-24">
         <div class="xl:mx-auto xl:w-full xl:max-w-sm 2xl:max-w-md">
-          <div className='w-auto mb-2'><img src={gmrit} height={130} width={130}/></div>
+        <div className='w-auto mb-2'><img src={gmrit} height={130} width={130}/></div>
           <h2 class="text-3xl font-bold leading-tight text-black sm:text-4xl">
             Student Login
           </h2>
