@@ -1,10 +1,14 @@
 import React,{useState} from 'react'
 import IT from '../Assets/ITBLOCK.png'
 import gmrit from '../Assets/gmrit.png'
+import { RiEyeCloseFill } from "react-icons/ri";
+import { FaRegEye } from "react-icons/fa";
 
 const Login = () => {
 
   const [isLoading, setIsLoading] = useState(false);
+  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [password, setPassword] = useState('');
 
   const handleClick = () => {
     setIsLoading(true);
@@ -12,6 +16,10 @@ const Login = () => {
     setTimeout(() => {
       setIsLoading(false);
     }, 8000); 
+  };
+
+  const handlePasswordToggle = () => {
+    setIsPasswordVisible(!isPasswordVisible);
   };
 
   return (
@@ -72,13 +80,20 @@ const Login = () => {
                     Forgot password?{" "}
                   </a>
                 </div>
-                <div class="mt-2">
+                <div className="mt-2">
+                <div className="flex items-center border border-gray-400 rounded-md">
                   <input
-                    class="flex h-10 w-full rounded-md border border-gray-400 bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 focus:ring-offset-1 disabled:cursor-not-allowed disabled:opacity-50"
-                    type="password"
+                    className="h-10 w-full rounded-l-md bg-transparent px-3 py-2 text-sm placeholder:text-gray-400 disabled:cursor-not-allowed disabled:opacity-50 border-none"
+                    type={isPasswordVisible ? "text" : "password"}
                     placeholder="Password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
                   />
+                  <div onClick={handlePasswordToggle} className="flex items-center px-3 cursor-pointer">
+                    {isPasswordVisible ? <FaRegEye /> : <RiEyeCloseFill />}
+                  </div>
                 </div>
+              </div>
               </div>
               <div>
               <button

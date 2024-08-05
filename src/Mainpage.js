@@ -10,10 +10,11 @@ import Placements from './Pages/Placements';
 import Events from './Pages/Events';
 import Attendance from './Pages/Attendance';
 import Feedback from './Pages/Feedback';
+import DisplayData from './Components/Displaydata';
 
 const Mainpage = () => {
   return (
-    <div className="overflow-x-hidden bg-cyan-950 sm:bg-black md:bg-black lg:bg-black w-[100vh] w-[100vw] flex flex-col items-start">
+    <div className="overflow-x-hidden bg-blue-700 sm:bg-black md:bg-blue-600 md:bg-blue-900 w-[100vh] w-[100vw] flex flex-col items-start">
       <div className=' flex fixed bg-cyan-950 justify-between items-center w-full z-20'>
       <div className='w-[20vw]'>
         <Sidebar />
@@ -46,6 +47,7 @@ const Mainpage = () => {
           <Route path='placements' element={<Placements />} />
           <Route path='events' element={<Events />} />
           <Route path='feedback' element={<Feedback />} />
+          <Route path='displaydata' element={<DisplayData />} />
         </Routes>
        <Outlet/>
       </div>
